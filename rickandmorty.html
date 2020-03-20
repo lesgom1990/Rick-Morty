@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick and Morty</title>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
     <link rel="stylesheet" href="rickandmorty.css"> 
 </head>
 <body>
-    <div class = container>
+    <header class = container>
+        <div class = "row" >
+            <h1 class="col-sm-12">Rick & Morty Characters</h1>
+            <h2 class ="row">
+                <p class="col-sm-6">Filter by name: </p>
+                <form class="col-sm-6"action="/rickandmorty.html" method="POST">
+                    <input type ="text" name ="character" id="namecharacter">
+                </form>
+            </h2>
+        </div>
         <div id="info"></div>
-    </div>
+    </header>
     <script src="rickandmorty.js"></script>    
-</body>
+</body> 
 </html>

@@ -13,12 +13,16 @@ let callcharacter = infocharacter=>{
     
     for (var i=0; i<infocharacter.results.length; i++){
         datarender += `<div class= "character">`;
+        datarender += `<div class= "characterpicture">`;
         datarender += `<img src="${infocharacter.results[i].image}" width="300px">`;
-        datarender += `<p class= "name info"> Name = `+infocharacter.results[i].name;
-        datarender += `<p class= "location info"> Location = `+infocharacter.results[i].location.name;
-        datarender += `<p class= "gender info"> Gender = `+infocharacter.results[i].gender;
-        datarender += `<p class= "status info"> Status = `+infocharacter.results[i].status;
-        datarender += `<p class= "species info"> Specie = `+infocharacter.results[i].species;
+        datarender += "</div>";
+        datarender += `<div class= "generalinfo">`;
+        datarender += `<p class= "name info"> Name: `+infocharacter.results[i].name;
+        datarender += `<p class= "location info"> Location: `+infocharacter.results[i].location.name;
+        datarender += `<p class= "gender info"> Gender: `+infocharacter.results[i].gender;
+        datarender += `<p class= "status info"> Status: `+infocharacter.results[i].status;
+        datarender += `<p class= "species info"> Specie: `+infocharacter.results[i].species;
+        datarender += "</div>";
         datarender += "</div>";
     }
     informacion.innerHTML = datarender;
