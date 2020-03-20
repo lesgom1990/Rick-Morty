@@ -1,3 +1,14 @@
 .character {
     border: gray dotted 3px; 
 }
+
+
+#info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+.info {
+    
+}
