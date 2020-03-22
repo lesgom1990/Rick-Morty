@@ -17,8 +17,8 @@
             <h2 class ="d-flex justify-content-around">
                 <p class="col-sm-6 filterlabel">Filter by name: </p>
                 <form class="col-sm-6"action="/rickandmorty.html" method="POST">
-                    <input type ="text" name ="character" id="namecharacter">
-                    <input type="submit" value="submit">
+                    <input type ="text" name ="character" id="namecharacter" onkeyup="filterCharacter(event)">
+                    <!-- <input type="button" value="Submit" id="submit" onClick="filterCharacter()"/> -->
                 </form>
             </h2>
         </div>
