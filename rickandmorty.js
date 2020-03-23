@@ -1,6 +1,6 @@
 const url ="https://rickandmortyapi.com/api/character/"
 let datarender ="";
-let informacion = document.getElementById("info");
+let information = document.getElementById("info");
 let charactersList = [];
 
 fetch(url)
@@ -27,22 +27,27 @@ let renderCharacter = infocharacter=>{
         datarender += "</div>";
         datarender += "</div>";
     }
-    informacion.innerHTML = datarender; 
+    information.innerHTML = datarender; 
 }
 
 let filterCharacter = (event) =>
 {
-    // let filteredCharacter = document.getElementById("namecharacter");
-    let filteredCharacter = event.target.value;
-    let charactername = filteredCharacter;
-    let name1 = charactername.toUpperCase();
+    let name = document.getElementById("namecharacter").value.toUpperCase();
+    let location = document.getElementById("location").value.toUpperCase();
+    let gender = document.getElementById("gender").value.toUpperCase();
+    let status = document.getElementById("status").checked?'Alive':'Dead'; //operador ternario, el ? es una condición
+    console.log({name, location, gender, status})
     let newCharacterList = [];
     for (var i=0; i<charactersList.length; i++){
-        let name2 = charactersList[i].name.toUpperCase();
-        if (name2.includes(name1)){
+        let cName = charactersList[i].name.toUpperCase();
+        let cLocation = charactersList[i].location.name.toUpperCase();
+        let cGender = charactersList[i].gender.toUpperCase();
+        let cStatus = charactersList[i].status;
+        debugger
+        if (cName.includes(name) && cLocation.includes(location) && (cGender === gender || gender ==="NONE") && cStatus.includes(status)){
             newCharacterList.push(charactersList[i]);
         }
         datarender = ""; 
         renderCharacter(newCharacterList);
-    } 
+    }
 }
