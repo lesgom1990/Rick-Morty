@@ -11,24 +11,32 @@
     <link rel="stylesheet" href="rickandmorty.css"> 
 </head>
 <body>
-    <header class = container>
+    <header class = container-fluid>
         <div class = "row" >
             <h1 class="col-sm-12">Rick & Morty Characters</h1>
-            <h2 class ="d-flex justify-content-around">
-                <div>
-                    <label for="character">Filter by name: </label>
-                    <input type ="text" name ="character" id="namecharacter">
-                    <label for="location">Filter by location: </label>
-                    <input type ="text" name ="location" id="location">
-                    <label for="selectgender">Filter by gender: </label>
-                    <select name="selectgender" id ="gender">
+            <h2>
+                <div class="row">
+                    <label class="col-sm-2 offset-2" for="character">Filter by name: </label>
+                    <input class="col-sm-6 filterbar" type ="text" name ="character" id="namecharacter">
+                </div>
+                <div class="row">
+                    <label class="col-sm-2 offset-2" for="location">Filter by location: </label>
+                    <input class="col-sm-6 filterbar"type ="text" name ="location" id="location">
+                </div>
+                <div class="row">
+                    <label class="col-sm-2 offset-2" for="selectgender">Filter by gender: </label>
+                    <select class="col-sm-6 filterbar" name="selectgender" id ="gender">
                         <option value="none"selected>Select gender</option> 
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                     </select>
-                    <label for="cbox1">Alive</label>
-                    <input type="checkbox" id="status" value="alive" name="status">
-                    <input type ="button" value ="filter" onClick="filterCharacter()">
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 offset-2">
+                        <input type="checkbox" id="status" value="alive" name="status">
+                        <label for="cbox1">Alive</label>
+                    </div>
+                    <input class="col-sm-1 offset-5" type ="button" value ="filter" onClick="filterCharacter()">
                 </div>
             </h2>
         </div>

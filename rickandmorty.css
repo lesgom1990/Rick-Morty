@@ -1,7 +1,7 @@
 .character {
-    border: rgb(212, 198, 198) solid 0.5px;
+    border: rgb(228, 225, 225) solid 0.5px;
     border-radius: 3%; 
-    background-color: rgb(158, 161, 168);
+    background-color: rgb(235, 235, 236);
 }
 
 
@@ -30,10 +30,19 @@ h1 {
     text-align: center;
     font-size: 80px;
     padding: 40px;
+    background-color: rgb(228, 209, 39);
 }
 
 #namecharacter{
-    width: 60%;
+    height: 40px;
+}
+
+#location{
+    height: 40px;
+}
+
+#gender{
+    height: 40px;
 }
 
 .filterlabel {
