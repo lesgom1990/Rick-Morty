@@ -12,8 +12,16 @@ fetch(url)
 .catch(err => console.log(err))
 
 let renderCharacter = infocharacter=>{
-    
-    for (var i=0; i<infocharacter.length; i++){
+    for (var i = 0; i < infocharacter.length; i++) {
+        if(i === 0){
+            datarender += `<div class= "row">`
+        }
+        else if(i % 4 === 0 ){
+            datarender += "</div>";
+            datarender += `<div class= "row">`       
+        }
+        
+        datarender += `<div class= "col-lg-3 col-md-6">`
         datarender += `<div class= "character">`;
         datarender += `<div class= "characterpicture">`;
         datarender += `<img src="${infocharacter[i].image}" width="300px">`;
@@ -26,9 +34,16 @@ let renderCharacter = infocharacter=>{
         datarender += `<p class= "species info"> Specie: `+infocharacter[i].species;
         datarender += "</div>";
         datarender += "</div>";
+        datarender += "</div>";
+
+        if(i === infocharacter.length - 1){
+             
+            datarender += "</div>";
+        }
+       
     }
-    information.innerHTML = datarender; 
-}
+        information.innerHTML = datarender; 
+    }
 
 let filterCharacter = (event) =>
 {
@@ -43,7 +58,6 @@ let filterCharacter = (event) =>
         let cLocation = charactersList[i].location.name.toUpperCase();
         let cGender = charactersList[i].gender.toUpperCase();
         let cStatus = charactersList[i].status;
-        debugger
         if (cName.includes(name) && cLocation.includes(location) && (cGender === gender || gender ==="NONE") && cStatus.includes(status)){
             newCharacterList.push(charactersList[i]);
         }

@@ -2,13 +2,19 @@
     border: rgb(228, 225, 225) solid 0.5px;
     border-radius: 3%; 
     background-color: rgb(235, 235, 236);
+    min-width: 330px;
 }
 
 
-#info {
+/* #info {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 10px;
+} */
+
+.filter .row {
+    padding: 0 30px;
+    margin-top: 30px;
 }
 
 .info {
