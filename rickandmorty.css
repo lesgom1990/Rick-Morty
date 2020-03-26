@@ -3,14 +3,8 @@
     border-radius: 3%; 
     background-color: rgb(235, 235, 236);
     min-width: 330px;
+    margin-top: 20px;
 }
-
-
-/* #info {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
-} */
 
 .filter .row {
     padding: 0 30px;
@@ -49,6 +43,7 @@ h1 {
 
 #gender{
     height: 40px;
+    font-size: 18px;
 }
 
 .filterlabel {
